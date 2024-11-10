@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder by M. Farhan</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <h1>Dynamic Resume Builder By Sameer</h1>
+    <form id="resumeform" onsubmit="generateResume(event)">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter Your Name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter Your Email" id="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" placeholder="Enter Phone Number" id="phone" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education</label>
+            <textarea id="education" rows="4" placeholder="List your education details here" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea id="experience" rows="4" placeholder="List your experience details here" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills</label>
+            <textarea id="skills" rows="4" placeholder="List your skills here" required></textarea>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-output" class="hidden">
+        <h2>Your Resume</h2>
+        <div id="resume-content"></div>
+        <button onclick="downloadResume()">Download Resume as PDF</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
